@@ -1,0 +1,32 @@
+models:
+  sbert_path: models/paraphrase-MiniLM-L3-v2
+  qwen_path: models/qwen2-0.5b-instruct
+  offline: true
+
+retrieval:
+  local_top_k: 5
+  web_top_k: 5
+  use_web: false
+  ddg_region: "us-en"
+  ddg_safe_search: "Moderate"
+  ddg_timeout_sec: 8
+
+generation:
+  max_new_tokens: 256
+  allow_sampling: false
+
+safety:
+  urgent_keywords: ["chest pain","shortness of breath","syncope","stroke"]
+  urgent_highlight: "⚠️ These symptoms may indicate an emergency. Seek immediate medical care."
+  caution_highlight: "⚠️ Concerning features present. Please consult a clinician soon."
+
+prompts:
+  intent_prompt: prompts/intent_prompt.txt
+  rewrite_prompt: prompts/rewrite_prompt.txt
+  answer_prompt: prompts/answer_prompt.txt
+
+intent:
+  use_llm: true
+
+logging:
+  level: INFO
