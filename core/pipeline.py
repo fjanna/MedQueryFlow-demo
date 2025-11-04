@@ -42,7 +42,7 @@ class MedQueryFlowPipeline:
         raw_intent_prompt = None
 
         if self.intent_mode == "llm":
-            # 确保 classify_with_conf 存在；如新版只有 predict()，可替换
+            # 确保 classify_with_conf 存在；
             if hasattr(MedQueryFlowPipeline._intent_llm, "classify_with_conf"):
                 intent, intent_probs, raw_intent_prompt = MedQueryFlowPipeline._intent_llm.classify_with_conf(user_query)
             else:
