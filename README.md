@@ -5,10 +5,10 @@ This is a lightweight, locally runnable demo built with minimal model dependenci
 ## Key Components
 
 - **Intent Classification**  
-  evaluates the conditional log-likelihood of each candidate label given a query, tokenizes and concatenates the prompt–label pairs, runs inference under torch.no_grad(), accumulates per-token log-probabilities with F.log_softmax, and applies a final softmax normalization to produce interpretable intent probabilities.
+  Evaluates the conditional log-likelihood of each candidate label given a query, tokenizes and concatenates the prompt–label pairs, runs inference under torch.no_grad(), accumulates per-token log-probabilities with F.log_softmax, and applies a final softmax normalization to produce interpretable intent probabilities.
 
 - **Query Rewriting**  
-  prompt-driven, with structured text cleaning and defensive fallback strategies to ensure reliable output under various runtime conditions.
+  Prompt-driven, with structured text cleaning and defensive fallback strategies to ensure reliable output under various runtime conditions.
 
 - **Safety Controls**  
   Detects urgent or critical symptoms and inserts emergency reminders automatically.
