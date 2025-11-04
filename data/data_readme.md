@@ -40,6 +40,6 @@ This will:
 data/medquad_subset.json
 ```
 
-> The script will automatically create or overwrite it when finished.
+The script will automatically create or overwrite it when finished.
 
 ---
