@@ -23,7 +23,7 @@ class IntentLLMClassifier:
         lab_ids = self.tok(label, return_tensors="pt").input_ids
         full = torch.cat([in_ids, lab_ids], dim=1)
 
-        # 修复：LLMClient 不是可调用对象
+
         model = getattr(self.model, "model", self.model)
         with torch.no_grad():
             out = model(full)
