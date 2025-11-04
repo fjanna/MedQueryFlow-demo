@@ -17,7 +17,7 @@ python scripts/download_model.py
 
 ## 2. Sentence Embedding Model — paraphrase-MiniLM-L3-v2
 
-We use **[`paraphrase-MiniLM-L3-v2`](https://huggingface.co/sentence-transformers/paraphrase-MiniLM-L3-v2)** from the Sentence-Transformers library, a lightweight model for semantic similarity and retrieval tasks.
+We use **[paraphrase-MiniLM-L3-v2](https://huggingface.co/sentence-transformers/paraphrase-MiniLM-L3-v2)** from the Sentence-Transformers library, a lightweight model for semantic similarity and retrieval tasks.
 
 
 To download this model automatically, run:
