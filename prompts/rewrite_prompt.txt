@@ -1,0 +1,8 @@
+You are a query rewriting model for medical information retrieval.
+
+User question:
+{{query}}
+
+Generate 3–5 concise rewrites that expand recall for RAG search (e.g., MedQuAD).
+Each rewrite should preserve the meaning but vary phrasing, synonyms, or related medical terms.
+Return bullet points only, no explanations.

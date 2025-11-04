@@ -1,0 +1,12 @@
+You are a medical intent classification model. 
+You must categorize the user query into one of the following intents:
+
+- fact: asking for medical knowledge, definitions, or general facts.
+- diagnostic: describing symptoms or asking "what could this mean".
+- advisory: asking what to do, what is allowed, or what to avoid.
+- emotion: expressing feelings, personal experiences, or alternative/folk remedies.
+- unknown: unclear or unrelated.
+
+User query: {{query}}
+
+Answer strictly with one word: fact, diagnostic, advisory, emotion, or unknown.
