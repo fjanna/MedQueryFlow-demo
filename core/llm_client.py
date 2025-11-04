@@ -9,7 +9,7 @@ class LLMClient:
         self.config = config or {}
         model_path = self.config.get("models", {}).get("qwen_path", "models/qwen2-0.5b-instruct")
         if not os.path.exists(model_path):
-            raise FileNotFoundError(f"❌ Qwen2 model not found at: {model_path}. Edit config.yaml -> models.qwen_path")
+            raise FileNotFoundError(f"Qwen2 model not found at: {model_path}. Edit config.yaml -> models.qwen_path")
         self.tokenizer = AutoTokenizer.from_pretrained(model_path, local_files_only=True)
         self.model = AutoModelForCausalLM.from_pretrained(model_path, local_files_only=True)
         self.model.eval()
