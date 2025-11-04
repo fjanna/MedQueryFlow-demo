@@ -13,7 +13,7 @@ This is a lightweight, locally runnable demo built with minimal model dependenci
 - **Safety Controls**  
   Detects urgent or critical symptoms and inserts emergency reminders automatically.
 
-## Quick Start：
+## Quick Start
 See `data/data_readme.md` for the local knowledge base setup, and `models/models_readme.md` for the model setup.
 ```bash
 pip install -r requirements.txt
