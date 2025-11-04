@@ -3,7 +3,7 @@ from typing import Any, Dict, List, Tuple
 import torch
 import torch.nn.functional as F
 
-LABELS = ["fact","diagnosis_request","advice","emotion"]
+LABELS = ["fact","diagnostic","advisory","emotion"]
 
 class IntentLLMClassifier:
     def __init__(self, model, tokenizer, cfg: Dict[str, Any]):
@@ -12,7 +12,7 @@ class IntentLLMClassifier:
         self.cfg = cfg or {}
         # Minimal prompt; projects may replace via config-prompts
         self.template = (
-            "Classify the user's medical query into one of: fact, diagnosis_request, advice, emotion.\n"
+            "Classify the user's medical query into one of: fact, diagnostic, advisory, emotion.\n"
             "Query: {query}\nLabel:"
         )
 
