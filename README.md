@@ -5,19 +5,20 @@ This is a lightweight, locally runnable demo built with minimal model dependenci
 ## Key Components
 
 - **Intent Classification**  
-  Categorizes queries into `fact`, `diagnostic`, `advisory`, or `emotion`.  
-  Each label routes the query to a suitable retrieval path (e.g., professional medical knowledge base vs. in-platform posts).
+  evaluating the conditional log-likelihood of each candidate label given a query, tokenizing and concatenating the prompt–label pairs, runs inference under torch.no_grad(), accumulates per-token log-probabilities using F.log_softmax, and applies a final softmax normalization to produce interpretable intent probabilities.
 
 - **Query Rewriting**  
-  Decomposes biased or ill-formed queries into neutral *sub-queries* to expand recall and reduce misleading assumptions.  
-  Example:  
-  > “Cervical spondylosis makes me dizzy and vomit” →  
-  > “Symptoms of cervical spondylosis” + “Causes of dizziness and vomiting”
+  prompt-driven, with structured text cleaning and defensive fallback strategies to ensure reliable output under various runtime conditions.
 
 - **Safety Controls**  
   Detects urgent or critical symptoms and inserts emergency reminders automatically.
 
+## Quick Start：
 See `data/data_readme.md` for the local knowledge base setup, and `models/models_readme.md` for the model setup.
+```bash
+pip install -r requirements.txt
+streamlit run app.py
+```
 
 ## Notes
 
