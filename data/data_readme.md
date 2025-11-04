@@ -1,10 +1,7 @@
-# 📁 `data/` Folder Guide
 
 This folder stores all datasets and knowledge sources required by the project.
 
----
-
-## 🧩 1. MedQuAD Dataset (Required)
+## 1. MedQuAD Dataset (Required)
 
 Please **manually download** the [MedQuAD](https://github.com/abachaa/MedQuAD) dataset and place it under:
 
@@ -18,23 +15,20 @@ Example structure:
 ```
 data/
 ├─ MedQuAD/
-│   ├─ Cancer/
-│   │   ├─ QAPairs1.xml
-│   │   └─ QAPairs2.xml
-│   ├─ Heart/
-│   │   └─ HeartQA.xml
+│   ├─ 1_CancerGov_QA
+│   ├─ 2_GARD_QA
 │   └─ ...
 └─ emergency_terms.json
 ```
 
 ---
 
-## ⚙️ 2. Convert XML → JSON
+## 2. Convert XML → JSON
 
 After placing MedQuAD, run the conversion script to build the unified QA dataset:
 
 ```bash
-python convert_medquad.py
+python scripts/convert_medquad_xml_to_json.py
 ```
 
 This will:
@@ -46,12 +40,11 @@ This will:
 data/medquad_subset.json
 ```
 
-> ⚠️ You **do not need to create** `medquad_subset.json` beforehand.  
 > The script will automatically create or overwrite it when finished.
 
 ---
 
-## 📦 3. Notes
+## 3. Notes
 
 - The resulting `medquad_subset.json` will be automatically used by the retrieval (RAG) component.
 - The conversion script skips invalid or empty QA pairs automatically.
