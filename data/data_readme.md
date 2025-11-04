@@ -43,9 +43,3 @@ data/medquad_subset.json
 > The script will automatically create or overwrite it when finished.
 
 ---
-
-## 3. Notes
-
-- The resulting `medquad_subset.json` will be automatically used by the retrieval (RAG) component.
-- The conversion script skips invalid or empty QA pairs automatically.
-- If you modify or update MedQuAD data, rerun the script to refresh the JSON.
