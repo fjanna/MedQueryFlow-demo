@@ -1,7 +1,7 @@
 import json, yaml, streamlit as st
 from core.pipeline import MedQueryFlowPipeline
 
-st.set_page_config(page_title="MedQueryFlow · Final Proper", layout="wide")
+st.set_page_config(page_title="MedQueryFlow", layout="wide")
 st.title("MedQueryFlow")
 
 with open("config.yaml","r",encoding="utf-8") as f:
