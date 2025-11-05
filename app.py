@@ -10,7 +10,7 @@ with open("config.yaml","r",encoding="utf-8") as f:
 if "pipeline" not in st.session_state:
     st.session_state["pipeline"] = MedQueryFlowPipeline(cfg)
 
-q = st.text_input("Ask a medical question:", "Does my chest feel tight because I ate something bad?")
+q = st.text_input("Ask a medical question:", "What is Diabetes? ")
 show_prompts = st.checkbox("Show raw prompts (debug)", value=True)
 
 if st.button("Run"):
